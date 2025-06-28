@@ -1,5 +1,5 @@
 {smcl}
-{* *! version 1.3 20250628}
+{* *! version 1.3 20250728}
 {vieweralsosee "" "--"}{...}
 {viewerjumpto "Syntax" "gmx##syntax"}{...}
 {viewerjumpto "Description" "gmx##description"}{...}
