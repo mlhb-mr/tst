@@ -1,5 +1,5 @@
 {smcl}
-{* *! version 1.3 20250728}
+{* *! version 1.4 20250728}
 {vieweralsosee "" "--"}{...}
 {viewerjumpto "Syntax" "gmx##syntax"}{...}
 {viewerjumpto "Description" "gmx##description"}{...}
@@ -116,5 +116,5 @@ BibTeX:
 {title:Version}
 
 {pstd}
-This is version 1.3 of {cmd:gmx}.
+This is version 1.4 of {cmd:gmx}.
 {p_end}
