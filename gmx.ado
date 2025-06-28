@@ -1,14 +1,14 @@
-*! gmd 1.3 01jul2025 Mohamed Lehbib
-cap program drop gmd
-program define gmd
+*! gmx 1.3 01jul2025 Mohamed Lehbib
+cap program drop gmx
+program define gmx
     version 15.0
     syntax [anything] [, COUntry(string) Version(string) Raw Iso Vars]
 	
 	* Check for updates
-	capture noisily adoupdate gmd           
+	capture noisily adoupdate gmx           
     if (!c(rc) & r(k_new)) {
-        di as err "A newer version of {bf:gmd} is available."
-        di as err "Type {stata adoupdate gmd, update} to install it."
+        di as err "A newer version of {bf:gmx} is available."
+        di as err "Type {stata adoupdate gmx, update} to install it."
     }
 	
 	* Checking for the dependency
@@ -73,7 +73,7 @@ program define gmd
         * If variable doesn't exist, display error and exit
         if `var_exists' == 0 {
             di as error "Invalid variable code: `var'"
-            di as text _newline "To see the list of valid variable codes, use: gmd, vars" _newline
+            di as text _newline "To see the list of valid variable codes, use: gmx, vars" _newline
             exit 498
         }
     }
@@ -142,7 +142,7 @@ program define gmd
 	
     * Handle current version explicitly
     if lower("`version'") == "current" {
-        local data_url "`base_url'/GMD_`current_version'.dta"
+        local data_url "`base_url'/gmx_`current_version'.dta"
     }
 	
     else {
@@ -155,7 +155,7 @@ program define gmd
 		}
         
         * If we get here, format is valid
-        local data_url "`base_url'/GMD_`version'.dta"
+        local data_url "`base_url'/gmx_`version'.dta"
 		}
 		
 		local current_version "`version'"
@@ -163,7 +163,7 @@ program define gmd
 	
     else {
         * Default to current base URL
-        local data_url "`base_url'/GMD_`current_version'.dta"
+        local data_url "`base_url'/gmx_`current_version'.dta"
     }
 	
 	
@@ -183,7 +183,7 @@ program define gmd
         
         if `valid' == 0 {
             di as error "Error: Invalid country code '`country''"
-            di as text _newline "To see the list of valid country codes, use: gmd, iso" _newline
+            di as text _newline "To see the list of valid country codes, use: gmx, iso" _newline
 			exit 498
         }
 		
@@ -223,8 +223,8 @@ program define gmd
         if "`anything'" == "" {
             * No variable specified, import first sheet with warning
             di as error "Warning: No variable specified."
-            di as text "Note: Raw data is only accessed variable-wise using: gmd [variable], raw"
-			di as text `"To download the full data documentation: {browse "https://www.globalmacrodata.com/GMD.xlsx":https://www.globalmacrodata.com/GMD.xlsx}"'
+            di as text "Note: Raw data is only accessed variable-wise using: gmx [variable], raw"
+			di as text `"To download the full data documentation: {browse "https://www.globalmacrodata.com/gmx.xlsx":https://www.globalmacrodata.com/gmx.xlsx}"'
 			exit _rc
         }
         else {
