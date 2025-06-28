@@ -1,20 +1,20 @@
 {smcl}
 {* *! version 1.3 01jul2025}
 {vieweralsosee "" "--"}{...}
-{viewerjumpto "Syntax" "gmd##syntax"}{...}
-{viewerjumpto "Description" "gmd##description"}{...}
-{viewerjumpto "Options" "gmd##options"}{...}
-{viewerjumpto "Examples" "gmd##examples"}{...}
+{viewerjumpto "Syntax" "gmx##syntax"}{...}
+{viewerjumpto "Description" "gmx##description"}{...}
+{viewerjumpto "Options" "gmx##options"}{...}
+{viewerjumpto "Examples" "gmx##examples"}{...}
 {title:Title}
 
 {phang}
-{bf:gmd} {hline 2} Download and analyze Global Macro Database with version control
+{bf:gmx} {hline 2} Download and analyze Global Macro Database with version control
 
 {marker syntax}{...}
 {title:Syntax}
 
 {p 8 17 2}
-{cmdab:gmd} [{it:varlist}] [{cmd:,} {cmdab:v:ersion(}{it:YYYY_QQ|current}{cmd:)} {cmdab:co:untry(}{it:string}{cmd:)} {cmdab:r:aw} {cmdab:i:so} {cmdab:var:s}]
+{cmdab:gmx} [{it:varlist}] [{cmd:,} {cmdab:v:ersion(}{it:YYYY_QQ|current}{cmd:)} {cmdab:co:untry(}{it:string}{cmd:)} {cmdab:r:aw} {cmdab:i:so} {cmdab:var:s}]
 
 {marker description}{...}
 {title:Description}
@@ -58,31 +58,31 @@ When used with the {cmd:raw} option, specifies the sheet name to import from the
 {title:Examples}
 
 {phang}Load the latest version:{p_end}
-{phang2}{cmd:. gmd}
+{phang2}{cmd:. gmx}
 
 {phang}Load a specific version:{p_end}
-{phang2}{cmd:. gmd, version(2025_03)}
+{phang2}{cmd:. gmx, version(2025_03)}
 
 {phang}Display a complete list of available variables with descriptions:{p_end}
-{phang2}{cmd:. gmd, vars}
+{phang2}{cmd:. gmx, vars}
 
 {phang}Display a complete list of available countries with their names and ISO3 codes:{p_end}
-{phang2}{cmd:. gmd, iso}
+{phang2}{cmd:. gmx, iso}
 
 {phang}Load specific variables:{p_end}
-{phang2}{cmd:. gmd nGDP pop}
+{phang2}{cmd:. gmx nGDP pop}
 
 {phang}Load data for a specific country:{p_end}
-{phang2}{cmd:. gmd, country(SGP)}
+{phang2}{cmd:. gmx, country(SGP)}
 
 {phang}Combine options:{p_end}
-{phang2}{cmd:. gmd nGDP pop, country(SGP) version(2025_03)}
+{phang2}{cmd:. gmx nGDP pop, country(SGP) version(2025_03)}
 
 {phang}Access raw data for a specific variable:{p_end}
-{phang2}{cmd:. gmd nGDP, raw}
+{phang2}{cmd:. gmx nGDP, raw}
 
 {phang}Combine options with raw data:{p_end}
-{phang2}{cmd:. gmd nGDP pop, country(SGP) version(2025_03) raw}
+{phang2}{cmd:. gmx nGDP pop, country(SGP) version(2025_03) raw}
 
 
 {title:Author}
@@ -116,5 +116,5 @@ BibTeX:
 {title:Version}
 
 {pstd}
-This is version 1.3 of {cmd:gmd}.
+This is version 1.3 of {cmd:gmx}.
 {p_end}
