@@ -1,4 +1,4 @@
-*! gmx 1.3 01jul2025 Mohamed Lehbib
+*! gmx 1.3 20250628 Mohamed Lehbib
 cap program drop gmx
 program define gmx
     version 15.0
